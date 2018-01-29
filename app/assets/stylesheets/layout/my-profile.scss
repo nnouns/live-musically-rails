@@ -1,5 +1,118 @@
 .my-profile-form {
 	&__textarea-edit-submit {
-		visibility: hidden;
-	}
+        visibility: hidden;
+    }
+    
+    &__textarea:disabled {
+        background: rgb(235,235,228);
+    }
+}
+
+.section-title {
+    grid-column: 1/col-end;
+    background-color: darkgray;
+    color: white;
+
+    > h3 {
+        text-align: center;
+    }
+}
+
+.after-header {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    margin-top: 5%;
+
+    .info-wrapper {
+        grid-column: 2/3;
+        display: grid; 
+        grid-template-columns: 33.3% 66.6%;
+
+        #profile-pic-placeholder {
+            grid-column: 1/2;
+            height: 200px;
+            width: 200px;
+            background-color: darkgray;
+            border-radius: 50%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .name-email-fields {
+            grid-column-start: 2;
+            width: 100%;
+            height: 100%;
+            padding-left: 20%;
+
+            > div {
+                border-bottom: 1px solid black;
+                padding-top: 15px;
+                padding-bottom: 5px;
+                font-weight: bold;
+            }
+        }
+
+        .about-section {
+            margin-top: 50px;
+            grid-column: 1/col-end;
+
+            .about-div {
+                // display: flex;
+                // justify-content: center;
+
+                text-align: center;
+                background-color: lightgray;
+                font-size: larger;
+                height: 40px;
+                width: 150px;
+
+                 .about-text {
+                    display: block;
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%)
+                }
+            }
+
+            .js-my-profile-textarea {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    }
+}
+
+.opportunities-created-list {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    .details-div {
+        // display: flex;
+        // justify-content: center;
+
+        text-align: center;
+        background-color: lightgray;
+        font-size: larger;
+        height: 40px;
+        width: 150px;
+        grid-column-start: 1;
+
+         .details-text {
+            display: block;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+    }
+
+    #opportunity-detail-title {
+        grid-column-start: 1;
+    }
+
+    .each-opportunity {
+        grid-column-start: 1;
+    }
 }
